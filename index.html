@@ -45,10 +45,12 @@
   <h4>India's No. 1 Trusted Company: PaperScript Outsourcing</h4>
 
   <!-- Join Button -->
-  <a target="_blank" href="https://t.me/+SnX4qEnk-Hc2OGZl" class="telegram-button"
-    onclick="trackSubscribe();">
-    Apply on Telegram
-  </a><br>
+<a href="https://t.me/+SnX4qEnk-Hc2OGZl"
+   class="telegram-button"
+   onclick="trackAndGo(event)">
+   Apply on Telegram
+</a>
+<br>
 
   <!-- Project Section -->
   <div class="projects">
@@ -208,8 +210,16 @@ function trackSubscribe() {
 
   sendEvent();
 }
-</script>
 
+// 🔹 New helper function to delay navigation
+function trackAndGo(e) {
+  e.preventDefault(); // stop instant redirect
+  trackSubscribe();
+  setTimeout(() => {
+    window.open("https://t.me/+SnX4qEnk-Hc2OGZl", "_blank");
+  }, 300); // wait 300ms so event sends properly
+}
+</script>
 
 
 </body>
