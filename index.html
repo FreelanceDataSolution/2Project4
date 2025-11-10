@@ -187,16 +187,29 @@
   </script>
 
 <script>
-  function trackSubscribe() {
-    if (localStorage.getItem('subscribed') === 'true') {
-      console.log("Already subscribed event fired, not sending again.");
-      return;
-    }
-    const eventId = 'subscribe_' + Date.now();
-    fbq('trackCustom', 'Subscribe', {}, { eventID: eventId });
-    localStorage.setItem('subscribed', 'true');
+function trackSubscribe() {
+  if (localStorage.getItem('subscribed') === 'true') {
+    console.log("Already subscribed event fired, not sending again.");
+    return;
   }
+
+  const eventId = 'subscribe_' + Date.now();
+
+  function sendEvent() {
+    if (typeof fbq === 'function') {
+      fbq('trackCustom', 'Subscribe', {}, { eventID: eventId });
+      console.log("Subscribe event sent:", eventId);
+      localStorage.setItem('subscribed', 'true');
+    } else {
+      console.log("fbq not ready yet, retrying...");
+      setTimeout(sendEvent, 300);
+    }
+  }
+
+  sendEvent();
+}
 </script>
+
 
 
 </body>
