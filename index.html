@@ -20,11 +20,11 @@
       s.parentNode.insertBefore(t, s)
     }(window, document, 'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1784706982151295');
+    fbq('init', '2211249586048942');
     fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1784706982151295&ev=PageView&noscript=1" /></noscript>
+      src="https://www.facebook.com/tr?id=2211249586048942&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
 
   
@@ -34,34 +34,33 @@
 
   <div class="top-banner">
     Don't have <strong>Telegram</strong> yet?
-    <a href="https://t.me/+njiml8aBBZ00ODhl">Try it now</a>
+    <a href="https://t.me/+SnX4qEnk-Hc2OGZl">Try it now</a>
   </div>
 
   <div class="header">
-    <img src="images/llogo.jpg" alt="Work From Home Logo" class="logo">
+    <img src="images/logo.jpg" alt="Work From Home Logo" class="logo">
   </div>
 
   <h2>𝗪𝗢𝗥𝗞 𝗙𝗥𝗢𝗠 𝗛𝗢𝗠𝗘 (𝗙𝗿𝗲𝗲𝗹𝗮𝗻𝗰𝗲 𝗝𝗼𝗯𝘀)™ 🏠</h2>
   <h4>India's No. 1 Trusted Company: PaperScript Outsourcing</h4>
 
   <!-- Join Button -->
-<a href="https://t.me/+njiml8aBBZ00ODhl"
-   class="telegram-button"
-   onclick="trackAndGo(event)">
-   Apply on Telegram
-</a>
-<br>
+  <a target="_blank" href="https://t.me/+SnX4qEnk-Hc2OGZl" class="telegram-button"
+    onclick="trackSubscribe();">
+    Apply on Telegram
+  </a><br>
 
   <!-- Project Section -->
   <div class="projects">
-    <h3 style="text-align:center;color:#05d474;">📑 Projects & Rewards</h3>
+    <h3 style="text-align:center;color:#05d474;">📑 Projects & Plan</h3>
+    <p>(Full <strong>&</strong> Part Time Work)</p>
     <table>
       <thead>
         <tr>
           <th>Project</th>
           <th>Pages</th>
-          <th>Duration</th>
-          <th>Estimated Reward</th>
+          <th>🕓Duration</th>
+          <th>💰Estimated Reward</th>
         </tr>
       </thead>
       <tbody>
@@ -69,25 +68,25 @@
           <td>Project 1</td>
           <td>50 pages (front + back = 100)</td>
           <td>7 days</td>
-          <td>₹13,500</td>
+          <td>Up to ₹25,000</td>
         </tr>
         <tr>
           <td>Project 2</td>
           <td>90 pages (front + back = 180)</td>
           <td>10 days</td>
-          <td>₹19,000</td>
+          <td>Up to 30,000</td>
         </tr>
         <tr>
           <td>Project 3</td>
           <td>120 pages (front + back = 240)</td>
           <td>15 days</td>
-          <td>₹22,000</td>
+          <td>Up to ₹35,000</td>
         </tr>
         <tr>
           <td>Project 4</td>
           <td>190 pages (front + back = 380)</td>
-          <td>26 days</td>
-          <td>₹28,000</td>
+          <td>30 days</td>
+          <td>Up to ₹45,000</td>
         </tr>
       </tbody>
     </table>
@@ -153,7 +152,7 @@
   <div class="timer" id="countdown">00 Min 59 Sec ⏳ Hurry, Limited Seats!</div>
   <p>If you have <strong>Telegram</strong> you can view and apply,
     <span class="highlight">
-      <a href="https://t.me/+njiml8aBBZ00ODhl" style="text-decoration: none; color: #00aaff;">
+      <a href="https://t.me/+SnX4qEnk-Hc2OGZl" style="text-decoration: none; color: #00aaff;">
         Freelance Data Solution
       </a>
     </span>
@@ -188,39 +187,65 @@
     }
   </script>
 
-<script>
-function trackSubscribe() {
-  if (localStorage.getItem('subscribed') === 'true') {
-    console.log("Already subscribed event fired, not sending again.");
-    return;
-  }
-
-  const eventId = 'subscribe_' + Date.now();
-
-  function sendEvent() {
-    if (typeof fbq === 'function') {
+  <script>
+    function trackSubscribe() {
+      if (localStorage.getItem('subscribed') === 'true') {
+        console.log("Already subscribed event fired, not sending again.");
+        return;
+      }
+      const eventId = 'subscribe_' + Date.now();
       fbq('trackCustom', 'Subscribe', {}, { eventID: eventId });
-      console.log("Subscribe event sent:", eventId);
       localStorage.setItem('subscribed', 'true');
-    } else {
-      console.log("fbq not ready yet, retrying...");
-      setTimeout(sendEvent, 300);
     }
+  </script>
+
+
+<!-- WhatsApp Button -->
+<a id="whatsapp-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<style>
+  #whatsapp-float {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+    transition: all 0.3s ease;
   }
+  #whatsapp-float img {
+    width: 28px;
+    height: 28px;
+  }
+  #whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(37, 211, 102, 0.6);
+  }
+</style>
 
-  sendEvent();
-}
-
-// 🔹 New helper function to delay navigation
-function trackAndGo(e) {
-  e.preventDefault(); // stop instant redirect
-  trackSubscribe();
-  setTimeout(() => {
-    window.open("https://t.me/+njiml8aBBZ00ODhl", "_blank");
-  }, 300); // wait 300ms so event sends properly
-}
+<script>
+  // Fetch WhatsApp number from GitHub JSON file (10 digits only)
+  fetch("https://raw.githubusercontent.com/FreelanceDataSolution/Whatsapp/main/whatsapp.json")
+    .then(res => res.json())
+    .then(data => {
+      const localNumber = data.number; // 10-digit number
+      const fullNumber = "91" + localNumber; // add country code +91
+      const btn = document.getElementById("whatsapp-float");
+      btn.href = `https://wa.me/${fullNumber}`;
+    })
+    .catch(() => {
+      // fallback number if file not found
+      document.getElementById("whatsapp-float").href = "https://wa.me/919999999999";
+    });
 </script>
-
 
 </body>
 
